@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+    <!-- MODAL -->
+    <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+      <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto relative">
+        <button id="cerrar-modal" class="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
+        <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">¡Contáctanos!</h2>
+        <p class="text-gray-600 mb-6 text-center">Envíanos un mensaje y te responderemos lo antes posible.</p>
+
+        <form>
+          <div class="mb-4">
+            <label for="nombre_contacto" class="block text-sm font-medium text-gray-700">Nombre completo</label>
+            <input type="text" id="nombre_contacto" name="nombre_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Ej. Lillian Osorio">
+          </div>
+
+          <div class="mb-4">
+            <label for="email_contacto" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+            <input type="email" id="email_contacto" name="email_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="ejemplo@correo.com">
+          </div>
+
+          <div class="mb-4">
+            <label for="asunto_contacto" class="block text-sm font-medium text-gray-700">Asunto</label>
+            <input type="text" id="asunto_contacto" name="asunto_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Ej. Cotización de proyecto web">
+          </div>
+
+          <div class="mb-6">
+            <label for="mensaje_contacto" class="block text-sm font-medium text-gray-700">Mensaje</label>
+            <textarea id="mensaje_contacto" name="mensaje_contacto" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Describe tu necesidad o pregunta"></textarea>
+          </div>
+
+          <div class="flex justify-center">
+            <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-zinc-900 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300">Enviar mensaje</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+ 
+
+
+
+    <div class="bg-gray-100 min-h-screen p-4 flex items-center justify-center">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl mt-10">
+    <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Soporte Técnico</h2>
+<p class="text-gray-600 mb-6 text-sm text-center">Completa el formulario para que podamos ayudarte de forma rápida y eficiente.</p>
+
+    <form>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="correo" class="block text-sm font-medium text-gray-700">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label for="asunto" class="block text-sm font-medium text-gray-700">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono de contacto:</label>
+          <input type="tel" id="telefono" name="telefono" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+      </div>
+      
+      <div class="mb-6">
+        <label for="descripcion" class="block text-sm font-medium text-gray-700">Descripción del problema:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+      </div>
+
+      <div class="flex justify-end">
+        <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-zinc-900 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300">
+          Enviar solicitud de soporte
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="bg-black">
+<div class="flex items-end justify-between">
+<div class="text-white text-base p-8">
+  <p class="font-semibold">TechSolutions</p>
+  <p>Dirección: Calle Falsa 123, Ciudad de México, México</p>
+  <p>Teléfono: +52 55 1234 5678</p>
+  <p>Correo Electrónico: contacto@techsolutions.com</p>
+</div>
+
+<div class="text-white text-base p-8 flex items-center gap-4 justify-between">
+  <p class="font-semibold text-2xl">TechSolutions</p>
+  <img src="/img/redes7.webp" alt="" class="w-44">
+</div>
+
+</div>
+
+  </footer>
+
+<script src="header.js"></script>
+<script src="modal.js"></script>
+</body>
+</html>

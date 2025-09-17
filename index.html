@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechSolutions</title>
+</head>
+
+<body>
+
+  <!-- HERO+NAVBAR -->
+
+  <header class="relative h-screen bg-cover bg-center" style="background-image: url('/img/h4.jpeg');">
+    <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+    <nav class="absolute top-0 left-0 w-full flex items-center justify-between px-8 py-4 text-white text-2xl z-20">
+      <h1 class="text-4xl font-bold"><a href="index.html">TechSolutions</a></h1>
+
+      <ul class="flex space-x-6">
+
+        <li><a href="index.html" class="hover:text-blue-300">Inicio</a></li>
+        <li><a href="servicios.html" class="hover:text-blue-300">Servicios</a></li>
+        <li><a href="#" class="hover:text-blue-300">Proyectos</a></li>
+        <li><a href="#" class="hover:text-blue-300">Noticias</a></li>
+        <li><a href="#" class="hover:text-blue-300">Tienda</a></li>
+      </ul>
+
+     <button id="abrir-modal" class="border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition-colors duration-300">¡Contáctanos!</button>
+
+    </nav>
+
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+      <h2 class="text-4xl md:text-6xl font-semibold mb-4">Impulsamos tu empresa con tecnología</h2>
+      <a href="#" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-300 hover:text-black mt-8 text-2xl">Conoce nuestros servicios</a>
+    </div>
+  </header>
+
+  <!-- MODAL -->
+  <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto relative">
+      <button id="cerrar-modal" class="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
+      <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">¡Contáctanos!</h2>
+      <p class="text-gray-600 mb-6 text-center">Envíanos un mensaje y te responderemos lo antes posible.</p>
+
+      <form>
+        <div class="mb-4">
+          <label for="nombre_contacto" class="block text-sm font-medium text-gray-700">Nombre completo</label>
+          <input type="text" id="nombre_contacto" name="nombre_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Ej. Lillian Osorio">
+        </div>
+
+        <div class="mb-4">
+          <label for="email_contacto" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+          <input type="email" id="email_contacto" name="email_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="ejemplo@correo.com">
+        </div>
+
+        <div class="mb-4">
+          <label for="asunto_contacto" class="block text-sm font-medium text-gray-700">Asunto</label>
+          <input type="text" id="asunto_contacto" name="asunto_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Ej. Cotización de proyecto web">
+        </div>
+
+        <div class="mb-6">
+          <label for="mensaje_contacto" class="block text-sm font-medium text-gray-700">Mensaje</label>
+          <textarea id="mensaje_contacto" name="mensaje_contacto" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Describe tu necesidad o pregunta"></textarea>
+        </div>
+
+        <div class="flex justify-center">
+          <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-zinc-900 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300">Enviar mensaje</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+
+  <div class="flex flex-row">
+      <main>
+        <section class="bg-gray-150">
+          <h1 class="bg-gray-300 rounded-2xl m-4 p-3 text-6xl font-semibold text-center">Servicios</h1>
+
+        <div class="grid grid-cols-2 grid-rows-2 gap-4 text-2xl">
+          <div class="m-8 flex items-end justify-evenly shadow-lg overflow-hidden rounded-lg">
+            <div>
+              <h1 class="text-4xl font-semibold text-start">Ciber-Seguridad</h1>
+              <p class="mt-3 text-gray-600 text-lg">Protegemos tu empresa de amenazas digitales con soluciones robustas para garantizar la integridad de tus datos.</p>
+            </div>
+
+            <div>
+              <img src="/img/candado.webp" alt="candado" class="w-full max-w-3/4">
+            </div>
+          </div>
+
+          <div class="m-8 flex items-end justify-evenly shadow-md overflow-hidden rounded-lg">
+            <div>
+              <h1 class="text-4xl font-semibold text-start">Desarrollo de software personalizado</h1>
+              <p class="mt-3 text-gray-600 text-lg">Creamos aplicaciones y plataformas únicas que se adaptan perfectamente a las necesidades específicas de tu negocio.</p>
+            </div>
+
+            <div>
+            <img src="/img/desarrollo.png" alt="desarrollo" class="w-full max-w-3/4">
+            </div>
+          </div>
+
+          <div class="m-8 flex items-end justify-evenly shadow-md overflow-hidden rounded-lg">
+            <div>
+              <h1 class="text-4xl font-semibold text-start">Soluciones en la nube</h1>
+              <p class="mt-3 text-gray-600 text-lg">Migra, optimiza y gestiona tus operaciones en la nube para mejorar la eficiencia y la escalabilidad de tu negocio.</p>
+            </div>
+
+            <div>
+            <img src="/img/nube.png" alt="nube" class="w-full max-w-3/4">
+            </div>
+          </div>
+
+          <div class="m-8 flex items-end justify-evenly shadow-md overflow-hidden rounded-lg">
+          <div>
+              <h1 class="text-4xl font-semibold text-start">Consultoria Tecnológica</h1>
+              <p class="mt-3 text-gray-600 text-lg">Asesoramos a tu empresa en la selección e implementación de tecnologías que impulsen tu transformación digital.</p>
+            </div>
+
+            <div>
+              <img src="/img/consul2.png" alt="consul" class="w-full max-w-3/4">
+            </div>
+          </div>
+        </div> 
+
+        <div class="flex justify-end">
+          <button class="mt-4 px-4 py-2 bg-indigo-200 text-gray-800 font-medium text-base rounded-lg hover:bg-indigo-300 transition">Conoce todos nuestros servicios</button>
+
+        </div>
+
+      </section>
+
+      <section class="m-4">
+        <h2 class="bg-gray-300 p-3  rounded-2xl text-6xl font-semibold text-center">Proyectos Recientes</h2>
+          
+        <div class="flex flex-row justify-between gap-4">
+          <div class="bg-white shadow-lg overflow-hidden rounded-lg">
+            <div class="p-6">
+              <img src="img/p5.webp" alt="" class="rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Fortificación digital para FintechCo</h3>
+              <p class="text-gray-600 mb-4">Implementamos un sistema de ciberseguridad multicapa que protege las transacciones y los datos de sus clientes. Redujimos el riesgo de ataques en un 95%.</p>
+              
+              <div class="flex space-x-4 justify-end">
+                <button class="mt-4 px-4 py-2 bg-indigo-200 text-gray-800 font-medium rounded-lg hover:bg-indigo-300 transition">Conocer más proyectos</button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="grid grid-rows-2">
+            <div class="bg-white shadow-lg overflow-hidden rounded-lg">
+              <div class="p-6">
+                <img src="img/p3.webp" alt="" class="rounded-lg">
+                <h3 class="text-xl font-bold mb-3">Plataforma de gestion para LogiCorp</h3>
+                <p class="text-gray-600 mb-4">Desarrollamos una plataforma personalizada para automatizar la gestión de inventario y optimizar la cadena de suministro, aumentando la eficiencia operativa en un 40%.</p>
+              </div>
+            </div>
+              
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="p-6">
+              <img src="img/p2.jpg" alt="" class="rounded-lg">
+              <h3 class="text-xl font-bold mb-3">Migración a la nuve para RetailPlus</h3>
+              <p class="text-gray-600">Asesoramos y ejecutamos la migración completa de su infraestructura de TI a la nube, reduciendo los costos de mantenimiento y mejorando la escalabilidad de sus servicios.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="bg-gray-100 rounded-2xl shadow-lg p-6 mt-10">
+      <!-- Testimonios -->
+      <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-blue-200 pb-2 text-center">Testimonios de Clientes</h2>
+      <div class="space-y-4 text-sm text-gray-600">
+        <blockquote class="border-l-4 border-blue-600 pl-3 italic">
+          “Gracias a TechSolutions, nuestros datos están más seguros que nunca.”
+          <span class="block font-semibold mt-1">— Ana López, CEO de Innovatech</span>
+        </blockquote>
+        <blockquote class="border-l-4 border-blue-600 pl-3 italic">
+          “Un socio tecnológico de primer nivel. Mejoramos nuestra productividad.”
+          <span class="block font-semibold mt-1">— Carlos Ruiz, Gerente de LogiCorp</span>
+        </blockquote>
+      </div>
+
+      <!-- Promociones -->
+      <h2 class="text-xl font-bold text-gray-800 mt-8 mb-4 border-b border-blue-200 pb-2 text-center">¡Promociones!</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li class="bg-gray-100 border-l-4 border-blue-400 p-3 rounded">
+          Auditoría de Ciberseguridad gratuita para nuevas empresas.
+        </li>
+        <li class="bg-green-50 border-l-4 border-blue-400 p-3 rounded">
+          Paquete de sitio web profesional: Diseño + Hosting por un año + Soporte básico.
+        </li>
+        <li class="bg-green-50 border-l-4 border-blue-400 p-3 rounded">
+          15% de descuento en la migración de tu infraestructura a la nube.
+        </li>
+      </ul>
+
+      <!-- COTIZACION Y SOPORTE -->
+
+      <h2 class="text-xl mt-6 font-bold text-gray-800 mb-4 border-b border-blue-200 pb-2 text-center">¿Necesitas contactarte con nosotros?</h2>
+      <div class="space-y-4 text-sm text-gray-600">
+
+        <blockquote class="border-l-4 border-blue-200 pl-3 italic">
+
+          <div class="flex flex-col text-center"> Soporte técnico las 24hrs
+          <a href="soporte.html" class="bg-green-600 text-white text-center px-2 py-2 m-4 rounded-lg shadow hover:bg-green-700">Soporte</a>
+          </div>
+        </blockquote>
+
+        <blockquote class="border-l-4 border-blue-200 pl-3 italic">
+
+            <div class="flex flex-col text-center"> Realiza tu cotización
+              <a href="cotizacion.html" class="bg-green-600 text-white text-center px-2 py-2 m-4 rounded-lg shadow hover:bg-green-700">Cotizar</a>
+            </div>
+        </blockquote>
+
+      </div>
+    </aside>
+  </div>
+
+  <footer class="bg-black">
+    <div class="flex items-end justify-between">
+      <div class="text-white text-base p-8">
+        <p class="font-semibold">TechSolutions</p>
+        <p>Dirección: Calle Falsa 123, Ciudad de México, México</p>
+        <p>Teléfono: +52 55 1234 5678</p>
+        <p>Correo Electrónico: contacto@techsolutions.com</p>
+      </div>
+
+      <div class="text-white text-base p-8 flex items-center gap-4 justify-between">
+        <p class="font-semibold text-2xl">TechSolutions</p>
+        <img src="/img/redes7.webp" alt="" class="w-44">
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="modal.js"></script>
+    
+</body>
+
+</html>
