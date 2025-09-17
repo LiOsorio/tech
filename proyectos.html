@@ -9,49 +9,100 @@
 </head>
 <body>
 
-    <div id="header-placeholder"></div>
+  <div id="header-placeholder"></div>
 
-    <div class="flex flex-row">
+  <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 hidden">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg mx-auto relative">
+      <button id="cerrar-modal" class="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
+      <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">¡Contáctanos!</h2>
+      <p class="text-gray-600 mb-6 text-center">Envíanos un mensaje y te responderemos lo antes posible.</p>
 
-    <main>
+      <form>
+        <div class="mb-4">
+          <label for="nombre_contacto" class="block text-sm font-medium text-gray-700">Nombre completo</label>
+          <input type="text" id="nombre_contacto" name="nombre_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Ej. Lillian Osorio">
+        </div>
+
+        <div class="mb-4">
+          <label for="email_contacto" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+          <input type="email" id="email_contacto" name="email_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="ejemplo@correo.com">
+        </div>
+
+        <div class="mb-4">
+          <label for="asunto_contacto" class="block text-sm font-medium text-gray-700">Asunto</label>
+          <input type="text" id="asunto_contacto" name="asunto_contacto" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Ej. Cotización de proyecto web">
+        </div>
+
+        <div class="mb-6">
+          <label for="mensaje_contacto" class="block text-sm font-medium text-gray-700">Mensaje</label>
+          <textarea id="mensaje_contacto" name="mensaje_contacto" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Describe tu necesidad o pregunta"></textarea>
+        </div>
+
+        <div class="flex justify-center">
+          <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-zinc-900 outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300">Enviar mensaje</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="flex flex-row">
+
+      <main>
  
 
-      <section class="m-4 mt-20">
-        <h2 class="bg-gray-300 p-3  rounded-2xl text-6xl font-semibold text-center">Proyectos Recientes</h2>
-          
-        <div class="flex flex-row justify-between gap-4">
-          <div class="bg-white shadow-lg overflow-hidden rounded-lg">
-            <div class="p-6">
-              <img src="img/p5.webp" alt="" class="rounded-lg">
-              <h3 class="text-xl font-bold mb-3">Fortificación digital para FintechCo</h3>
-              <p class="text-gray-600 mb-4">Implementamos un sistema de ciberseguridad multicapa que protege las transacciones y los datos de sus clientes. Redujimos el riesgo de ataques en un 95%.</p>
-              
-              
+          <section class="p-6 m-20">
+          <h2 class="bg-gray-300 p-3 m-6  rounded-2xl text-6xl font-semibold text-center">Proyectos Recientes</h2>
+  
+          <div class="relative w-full max-w-7xl mx-auto flex items-center justify-between">
+            <button id="prevBtn" class="z-10 bg-white p-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+    
+          <div class="relative w-full overflow-hidden">
+            <div id="main-card-container" class="relative rounded-lg shadow-xl">
+               <img id="main-card-img" src="/img/p5.webp" alt="Proyecto Principal" class="w-full h-auto object-cover rounded-lg">
+               <div id="main-card-overlay" class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6 text-white text-center opacity-0 transition-opacity duration-300">
+                <div id="main-card-text">
+                  <h3 class="text-2xl font-bold mb-2">Fortificación digital para FintechCo</h3>
+                  <p class="text-lg">Implementamos un sistema de ciberseguridad multicapa que protege las transacciones y los datos de sus clientes. Redujimos el riesgo de ataques en un 95%.</p>
+                </div>
+              </div>
             </div>
-          </div>
       
-          <div class="grid grid-rows-2">
-            <div class="bg-white shadow-lg overflow-hidden rounded-lg">
-              <div class="p-6">
-                <img src="img/p3.webp" alt="" class="rounded-lg">
-                <h3 class="text-xl font-bold mb-3">Plataforma de gestion para LogiCorp</h3>
-                <p class="text-gray-600 mb-4">Desarrollamos una plataforma personalizada para automatizar la gestión de inventario y optimizar la cadena de suministro, aumentando la eficiencia operativa en un 40%.</p>
-              </div>
-            </div>
-              
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="p-6">
-              <img src="img/p2.jpg" alt="" class="rounded-lg">
-              <h3 class="text-xl font-bold mb-3">Migración a la nuve para RetailPlus</h3>
-              <p class="text-gray-600">Asesoramos y ejecutamos la migración completa de su infraestructura de TI a la nube, reduciendo los costos de mantenimiento y mejorando la escalabilidad de sus servicios.</p>
-              </div>
-            </div>
-          </div>
+          <div id="thumbnail-row" class="flex justify-center space-x-4 overflow-x-hidden p-4">
+        <div class="thumbnail-card w-1/5 flex-shrink-0 rounded-lg overflow-hidden shadow-lg">
+          <img src="/img/p5.webp" alt="Proyecto 1" class="w-full h-24 object-cover">
         </div>
-      </section>
+        <div class="thumbnail-card w-1/5 flex-shrink-0 rounded-lg overflow-hidden shadow-lg">
+          <img src="/img/p3.webp" alt="Proyecto 2" class="w-80 h-24 object-cover">
+        </div>
+        <div class="thumbnail-card w-1/5 flex-shrink-0 rounded-lg overflow-hidden shadow-lg">
+          <img src="/img/p2.jpg" alt="Proyecto 3" class="w-80 h-24 object-cover">
+        </div>
+        <div class="thumbnail-card w-1/5 flex-shrink-0 rounded-lg overflow-hidden shadow-lg">
+          <img src="/img/p7.webp" alt="Proyecto 4" class="w-80 h-24 object-cover">
+        </div>
+        <div class="thumbnail-card w-1/5 flex-shrink-0 rounded-lg  overflow-hidden shadow-lg">
+          <img src="/img/p6.jpg" alt="Proyecto 5" class="w-80 h-24 object-cover">
+        </div>
+      </div>
+    </div>
+    
+    <button id="nextBtn" class="z-10 bg-white p-3 rounded-full shadow-lg hover:bg-gray-200 transition-colors duration-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</section>
+       
+
     </main>
 
-    <aside class="bg-gray-100 rounded-2xl shadow-lg p-6 mt-20">
+    <aside class="bg-gray-100 rounded-2xl shadow-lg p-6 mt-20 w-1/6">
       <!-- Testimonios -->
       <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-blue-200 pb-2 text-center">Testimonios de Clientes</h2>
       <div class="space-y-4 text-sm text-gray-600">
@@ -122,6 +173,7 @@
     </footer>
 
     <script src="header.js"></script>
+    <script src="proyect.js"></script>
     <script src="modal.js"></script>
 </body>
 </html>
